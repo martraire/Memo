@@ -1,4 +1,3 @@
-
       =============================================================
         SSH  - Some commands to connect/copy to a remote server -
       =============================================================
@@ -60,7 +59,8 @@
     • In the second terminal, type:
         > scp -P 1234 user2@localhost:path_file .
 
-
+    N.B: To copy a directory, add "-r" :
+        > scp -r -P 1234 user2@localhost:path_dir .
 
 
 
