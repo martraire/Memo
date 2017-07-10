@@ -32,14 +32,17 @@ Configure several hosts, like previously, this in your configuration file. After
 
 #### How to copy a file from your local machine to a remote machine ?
 Let's copy a file from the current directory on your local machine to the directory */home/me/stuff* on a remote machine:
+
 `scp myfile user@remotemachine.domain.org:/home/me/stuff`
 
 #### How to copy a file between two remote machines ?
 Let's copy a file from remote1 machine to remote2 machine:
+
 `scp user1@remote1:/home/me/file user2@remote2:/home/me/.`
 
 #### How to copy a directory from your local machine to a remote machine ?
 Let's copy the directory "mydir" from your local machine to a remote machine "remotemachine.domain.org":
+
 `scp -r mydir user@remotemachine.domain.org:/home/me/.`
 
 
@@ -53,6 +56,6 @@ Sometimes, you need to copy a file/directory to a server needing 2 remote hosts.
 - In the second terminal, type:
 `scp -P 1234 user2@localhost:path_file .`
 
-N.B: To copy a directory instead of a file, add "-r" in the third step:
+N.B: To copy a directory instead of a file, add `-r` in the third step:
 `scp **-r** -P 1234 user2@localhost:path_dir .`
 
