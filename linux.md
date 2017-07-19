@@ -41,6 +41,26 @@ For example, you could archive an entire directory and exclude all *.mp4* files 
 
 `tar -czvf archive.tar.gz /home/ubuntu --exclude=*.mp4`
 
+### Use bzip2 Compression Instead of gzip
+While gzip compression is most frequently used to create *.tar.gz* or *.tgz* files, **tar** also supports **bzip2 compression**. This allows you to create **bzip2-compressed files**, often named **.tar.bz2**, **.tar.bz**, or **.tbz files**. To do so, just replace the `-z` for gzip in the commands here with a `-j` for bzip2.
+
+Gzip is faster, but it generally compresses a bit less, so you get a somewhat larger file. Bzip2 is slower, but it compresses a bit more, so you get a somewhat smaller file. Gzip is also more common, with some stripped-down Linux systems including gzip support by default, but not bzip2 support. In general, though, gzip and bzip2 are practically the same thing and both will work similarly.
+
+For example, instead of the first example we provided for compressing the *stuff directory*, you’d run the following command:
+
+`tar -cjvf archive.tar.bz2 stuff`
+
 
 ### How to extract data?
+Once you have an archive, you can extract it with the **tar command**. The following command will extract the contents of *archive.tar.gz* to the current directory.
+
+`tar -xzvf archive.tar.gz`
+
+It’s the same as the archive creation command we used above, except the `-x` switch replaces the `-c` switch. This specifies you want to extract an archive instead of create one.
+
+You may want to extract the contents of the archive to a specific directory. You can do so by appending the `-C` switch to the end of the command. For example, the following command will extract the contents of the *archive.tar.gz* file to the */tmp directory*.
+
+`tar -xzvf archive.tar.gz -C /tmp`
+
+N.B: If the file is a bzip2-compressed file, replace the `-z` in the above commands with a `-j`.
 
