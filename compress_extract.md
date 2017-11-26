@@ -1,8 +1,4 @@
-# Linux commands
-In this memo, I give some of the most useful command on linux.
-
-
-## 1. Compress and Extract data
+## Compress and Extract data
 The **tar command** on Linux is often used to create **.tar.gz** or **.tgz** archive files, also called *"tarballs"*. This command has a large number of options, but you just need to remember a few letters to quickly create archives with **tar**. The **tar** command can extract the resulting archives, too.
 
 The GNU tar command included with Linux distributions has integrated compression. It can create a **.tar archive** and then compress it with *gzip* or *bzip2* compression in a single command. 
